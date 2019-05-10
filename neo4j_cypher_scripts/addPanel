@@ -1,0 +1,3 @@
+match (u:User {userId: "<firstname>.<lastname>@wales.nhs.uk"})
+create (v:VirtualPanel {virtualPanelName:"<name.of.panel> <version.number.of.panel>"})
+create (v)-[:DESIGNED_BY {date:<date.in.epoch.format>}]->(u)
