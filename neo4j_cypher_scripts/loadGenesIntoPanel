@@ -1,0 +1,4 @@
+LOAD CSV FROM "file:///<name.of.csv>.csv" AS LINE
+MATCH (s:Symbol {symbolId:line[0]})
+MATCH (v:VirtualPanel {virtualPanelName:"<name.of.panel> <version.number.of.panel>"})
+CREATE (v)-[:CONTAINS_SYMBOL]->(s)

@@ -1,0 +1,2 @@
+LOAD CSV FROM "file:///<name.of.csv>.csv" AS line
+MATCH (s:Symbol {symbolId:line[0]})-[]-(v:Variant) return distinct s
